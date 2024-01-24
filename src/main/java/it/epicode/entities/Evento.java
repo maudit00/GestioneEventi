@@ -24,7 +24,7 @@ public class Evento {
     private TipoEvento tipoEvento;
     @Column (name = "numero_massimo_partecipanti")
     private int numeroMassimoPartecipanti;
-    @OneToMany ( mappedBy = "partecipazione")
+    @OneToMany ( mappedBy = "partecipazione", cascade = CascadeType.REMOVE)
     private List<Partecipazione> partecipazione;
 
     @OneToOne
