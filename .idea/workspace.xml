@@ -7,10 +7,6 @@
     <list default="true" id="a4c3cb12-210a-4418-9749-8f2aeeba483b" name="Changes" comment="init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/dao/LocationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/dao/LocationDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/dao/PartecipazioneDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/dao/PartecipazioneDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/dao/PersonaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/dao/PersonaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/entities/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/entities/Persona.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +37,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Debug",
+    "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",

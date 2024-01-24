@@ -19,16 +19,25 @@ public class Main {
 
         Evento evento = new Evento();
         evento.setTitolo("concerto");
-        evento.setDescrizione("concerto sting");
-        evento.setData_evento(LocalDate.of(2023,11,20));
+        evento.setDescrizione("concerto beyonce");
+        evento.setData_evento(LocalDate.of(2022,10,20));
         evento.setTipoEvento(TipoEvento.PUBBLICO);
-        evento.setNumeroMassimoPartecipanti(200000);
+        evento.setNumeroMassimoPartecipanti(2000000);
 
-        eventoDao.save(evento);
-        Persona persona = new Persona("Alberto", "Elia", "alberto@gmail.com", LocalDate.of(1989,6,7), 'M');
+        Persona persona = new Persona("Pippo", "Franco", "pippo@gmail.com", LocalDate.of(1965,6,7), 'M');
+
+        /*
+        Persona persona1 = personaDao.getById(1);
+        System.out.println(persona1.getPartecipazioneList().stream().toList());
+
+         */
+
         personaDao.save(persona);
-        Location location = new Location ("Stadio Olimpico", "Roma");
+        Location location = new Location ("Stadio San Siro", "Milano");
         locationDao.save(location);
+        evento.setLocation(location);
+        eventoDao.save(evento);
+
         Partecipazione partecipazione = new Partecipazione(persona, evento, Stato.CONFERMATA);
         partecipazioneDao.save(partecipazione);
     }
