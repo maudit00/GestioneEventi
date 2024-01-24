@@ -24,21 +24,13 @@ public class Main {
         evento.setTipoEvento(TipoEvento.PUBBLICO);
         evento.setNumeroMassimoPartecipanti(200000);
 
+        eventoDao.save(evento);
         Persona persona = new Persona("Alberto", "Elia", "alberto@gmail.com", LocalDate.of(1989,6,7), 'M');
+        personaDao.save(persona);
         Location location = new Location ("Stadio Olimpico", "Roma");
+        locationDao.save(location);
         Partecipazione partecipazione = new Partecipazione(persona, evento, Stato.CONFERMATA);
-
-        saveAll(evento,persona,location,partecipazione);
-        System.out.println(evento);
-        System.out.println(persona);
-        System.out.println(partecipazione);
-        System.out.println(location);
+        partecipazioneDao.save(partecipazione);
     }
 
-    public static void saveAll(Evento e, Persona p, Location l, Partecipazione pa){
-        eventoDao.save(e);
-        personaDao.save(p);
-        locationDao.save(l);
-        partecipazioneDao.save(pa);
-    }
 }

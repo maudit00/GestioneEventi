@@ -21,7 +21,8 @@ public class Persona {
     private char sesso;
 
 
-    @OneToMany(mappedBy = "partecipazione")
+    @OneToMany(mappedBy = "persona")
+    @OrderBy("data_evento ASC")
     private List<Partecipazione> partecipazioneList;
 
     public int getId() {

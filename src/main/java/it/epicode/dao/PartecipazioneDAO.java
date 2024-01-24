@@ -4,14 +4,15 @@ import it.epicode.entities.Partecipazione;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.Persistence;
 
 public class PartecipazioneDAO {
     private EntityManagerFactory emf;
     private EntityManager em;
 
     public PartecipazioneDAO() {
-        this.emf = emf;
-        this.em = em;
+        emf = Persistence.createEntityManagerFactory("gestione_eventi");
+        em = emf.createEntityManager();
     }
 
     public Partecipazione save (Partecipazione p){

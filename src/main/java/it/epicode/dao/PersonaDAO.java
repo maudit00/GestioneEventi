@@ -4,14 +4,15 @@ import it.epicode.entities.Persona;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.Persistence;
 
 public class PersonaDAO {
     private EntityManagerFactory emf;
     private EntityManager em;
 
     public PersonaDAO() {
-        this.emf = emf;
-        this.em = em;
+        emf = Persistence.createEntityManagerFactory("gestione_eventi");
+        em = emf.createEntityManager();
     }
 
     public Persona save (Persona p){
