@@ -14,8 +14,7 @@ public class Location {
     public Location() {
     }
 
-    public Location(int id, String nome, String città) {
-        this.id = id;
+    public Location( String nome, String città) {
         Nome = nome;
         Città = città;
     }

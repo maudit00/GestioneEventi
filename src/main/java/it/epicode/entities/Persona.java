@@ -80,14 +80,12 @@ public class Persona {
         this.partecipazioneList = partecipazioneList;
     }
 
-    public Persona(int id, String nome, String cognome, String email, LocalDate dataDiNascita, char sesso, List<Partecipazione> partecipazioneList) {
-        this.id = id;
+    public Persona( String nome, String cognome, String email, LocalDate dataDiNascita, char sesso) {
         this.nome = nome;
         this.cognome = cognome;
         this.email = email;
         this.dataDiNascita = dataDiNascita;
         this.sesso = sesso;
-        this.partecipazioneList = partecipazioneList;
     }
 
     public Persona() {

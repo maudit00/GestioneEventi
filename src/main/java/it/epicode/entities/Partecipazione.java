@@ -51,8 +51,7 @@ public class Partecipazione {
         this.stato = stato;
     }
 
-    public Partecipazione(int id, Persona persona, Evento evento, Stato stato) {
-        this.id = id;
+    public Partecipazione( Persona persona, Evento evento, Stato stato) {
         this.persona = persona;
         this.evento = evento;
         this.stato = stato;

@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4c3cb12-210a-4418-9749-8f2aeeba483b" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/dao/LocationDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/dao/PartecipazioneDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/entities/Evento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/entities/Evento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/dao/LocationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/dao/LocationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/entities/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/entities/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/entities/Partecipazione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/entities/Partecipazione.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/entities/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/entities/Persona.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

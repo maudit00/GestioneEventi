@@ -1,6 +1,6 @@
 package it.epicode.dao;
 
-import it.epicode.entities.Partecipazione;
+import it.epicode.entities.Location;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
@@ -14,24 +14,24 @@ public class LocationDAO {
         this.em = em;
     }
 
-    public Partecipazione save (Partecipazione p){
+    public Location save (Location l){
         EntityTransaction et = em.getTransaction();
         et.begin();
-        em.persist(p);
+        em.persist(l);
         et.commit();
-        em.refresh(p);
-        return p;
+        em.refresh(l);
+        return l;
     }
 
-    public Partecipazione getById (int id){
-        return em.find(Partecipazione.class, id);
+    public Location getById (int id){
+        return em.find(Location.class, id);
     }
 
     public void delete (int id){
         EntityTransaction et = em.getTransaction();
         et.begin();
-        Partecipazione p = getById(id);
-        em.remove(p);
+        Location l = getById(id);
+        em.remove(l);
         et.commit();
     }
 }
