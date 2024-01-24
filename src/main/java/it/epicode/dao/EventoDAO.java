@@ -36,4 +36,9 @@ public class EventoDAO {
         em.remove(e);
         et.commit();
     }
+    
+    public void close(){
+        em.close();
+        emf.close();
+    }
 }

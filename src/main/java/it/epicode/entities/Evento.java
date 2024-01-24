@@ -3,6 +3,7 @@ package it.epicode.entities;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table (name = "eventi")
@@ -19,7 +20,17 @@ public class Evento {
     @Column (name = "descrizione")
     private String descrizione;
     @Enumerated (EnumType.STRING)
+    @Column (name = "tipo_evento")
     private TipoEvento tipoEvento;
+    @Column (name = "numero_massimo_partecipanti")
+    private int numeroMassimoPartecipanti;
+    @OneToMany ( mappedBy = "partecipazione")
+    private List<Partecipazione> partecipazione;
+
+    @OneToOne
+    @JoinColumn(name = "location_fk")
+    private Location location;
+
 
     public int getId() {
         return id;
@@ -31,6 +42,22 @@ public class Evento {
 
     public String getTitolo() {
         return titolo;
+    }
+
+    public List<Partecipazione> getPartecipazione() {
+        return partecipazione;
+    }
+
+    public void setPartecipazione(List<Partecipazione> partecipazione) {
+        this.partecipazione = partecipazione;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
     }
 
     public void setTitolo(String titolo) {
@@ -72,12 +99,21 @@ public class Evento {
                 '}';
     }
 
-    public Evento(int id, String titolo, LocalDate data_evento, String descrizione, TipoEvento tipoEvento) {
+    public int getNumeroMassimoPartecipanti() {
+        return numeroMassimoPartecipanti;
+    }
+
+    public void setNumeroMassimoPartecipanti(int numeroMassimoPartecipanti) {
+        this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
+    }
+
+    public Evento(int id, String titolo, LocalDate data_evento, String descrizione, TipoEvento tipoEvento, int numeroMassimoPartecipanti) {
         this.id = id;
         this.titolo = titolo;
         this.data_evento = data_evento;
         this.descrizione = descrizione;
         this.tipoEvento = tipoEvento;
+        this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
     }
 
     public Evento() {

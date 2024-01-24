@@ -12,16 +12,13 @@ public class Main {
     public static void main(String[] args) {
         EventoDAO eventodao = new EventoDAO();
         Evento evento = new Evento();
-        evento.setTitolo("partita");
-        evento.setDescrizione("partita di calcio");
-        evento.setData_evento(LocalDate.of(2024,01,20));
+        evento.setTitolo("concerto");
+        evento.setDescrizione("concerto sting");
+        evento.setData_evento(LocalDate.of(2023,11,20));
         evento.setTipoEvento(TipoEvento.PUBBLICO);
+        evento.setNumeroMassimoPartecipanti(200000);
 
         eventodao.save(evento);
         System.out.println(evento);
-        Evento e2 = eventodao.getById(1);
-        System.out.println(e2);
-
-        eventodao.delete(1);
     }
 }
